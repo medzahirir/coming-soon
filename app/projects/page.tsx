@@ -1,17 +1,33 @@
 // Place this file in: app/projects/page.tsx // Page "Projects" simple pour Next.js (App Router) — Tailwind CSS
+"use client"
+
 
 import Link from "next/link";
+import Navbar from "../components/Navbar";
+
 
 type Project = { id: string; title: string; description: string; stack: string[]; liveUrl?: string; };
 
 const projects: Project[] = [ { id: "site-vitrine", title: "Site Vitrine (placeholder)", description: "Page d'accueil simple avec sections À propos, Services et Contact (en développement).", stack: ["HTML", "CSS", "Tailwind", "Next.js"], liveUrl: "#", }, { id: "portfolio-coming-soon", title: "Portfolio Coming-Soon", description: "Template simple pour annoncer mon site et présenter mes compétences.", stack: ["Next.js", "TypeScript", "Tailwind"], liveUrl: "#", }, ];
 
-export default function ProjectsPage() { return ( <main className="min-h-screen bg-slate-50 text-slate-900"> <div className="max-w-5xl mx-auto px-4 py-12"> <header className="flex items-center justify-between mb-8"> <div> <h1 className="text-3xl font-bold">Projets</h1> <p className="text-sm text-slate-600 mt-1">Remplace ces placeholders quand tu auras tes vraies réalisations.</p> </div>
+export default function ProjectsPage() { 
+return (
 
-<nav className="flex gap-3 items-center">
-        <Link href="/" className="text-sm px-3 py-2 rounded-md border">Accueil</Link>
-        <Link href="/contact" className="text-sm px-3 py-2 rounded-md bg-green-600 text-white">Contact</Link>
-      </nav>
+
+ <main className="min-h-screen bg-slate-50 text-slate-900">
+ <div className="max-w-5xl mx-auto px-4 py-12">
+
+ <header className="flex items-center justify-between mb-8">
+
+ <div>
+ <h1 className="text-3xl font-bold">
+Projets</h1>
+ <p className="text-sm text-slate-600 mt-1">
+Remplace ces placeholders quand tu auras tes vraies réalisations
+.</p>
+
+ </div>
+    
     </header>
 
     <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
